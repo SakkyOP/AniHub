@@ -1,1 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ANIHUB</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/main-min.css">
+</head>
 
+<body>
+<!-- NAV BAR BELOW -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/">ANIHUB</a>
+    <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Tv Series <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Most Popular</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/contact-us">Contact US <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item dropdown active">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            FAQ
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/request-anime" id="action">Request Anime</a>
+            <a class="dropdown-item" href="#">Our Team</a>
+          </div>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link disabled" href="#">Disabled</a>
+        </li> -->
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+<!-- NAV BAR ABVE -->
+
+
+<!-- BODY HERE BELOW -->
+<div class="main-body">
+  
+  <div class="char-image">
+    <!-- <img class="character-left-side-img" src="images/luffy2.png" alt="" srcset=""> -->
+  </div>
+  <div class="content-body">
+  <!-- MAIN CONTENT HERE!! -->
+  <iframe src="/anime/one-punch-man/one-punch-man.html" frameborder="0" width="100%" height="100%"></iframe>
+
+
+  <script>
+    window.addEventListener('resize', () => {
+      document.querySelector('iframe').contentWindow.postMessage(JSON.stringify({msg: "Send your height!"}), "*")
+    })
+
+    document.querySelector('iframe').addEventListener('load', () => {
+      document.querySelector('iframe').contentWindow.postMessage(JSON.stringify({msg: "Send your height!"}), "*")
+    })
+
+    window.addEventListener('message', (e) => {
+        document.querySelector('iframe').style.height = `${JSON.parse(e.data).height}px`
+    })
+  </script>
+  </div>
+
+</div>
+<!-- BODY HERE ABOVE -->
+
+
+
+
+<!-- FOOTER BELOW -->
+
+<div class="footer-quick-fix">  <!-- This is so the footer luffy wont clash with other body contents  -->
+
+</div>
+<div class="page-footer bg-dark">
+  <div class="container">
+    <div class="row py-4 d-flex align-items-center">
+      <div class="col-md-12">
+        <a class="navbar-brand" href="#">ANIHUB</a>
+        <div class="footer-social-text">
+            <p class="footer-social-text-t1">Join Now</p>
+            <p class="footer-social-text-t2">ANIHUB GROUP</p> 
+        </div>
+        <div class="footer-social-links">
+          <a href="#">
+            <i class="fab fa-facebook-f text-white mr-4"></i>
+          </a>
+          <a href="#">
+            <i class="fab fa-twitter text-white mr-4"></i>
+          </a>
+          <a href="#">
+            <i class="fab fa-instagram text-white mr-4"></i>
+          </a>
+          <a href="#">
+            <i class="fab fa-discord text-white mr-4"></i>
+          </a>
+          <div class="anime-character">
+            <img class="footer-anime-img" src="/images/luffy1.png" alt="" srcset="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container text-center text-md-left mt-5">
+    <div class="row">
+      <div class="footer-section-2">
+        <a href="#"><h6 class="text-uppercase font-weight-bold">Terms of Services</h6></a>
+        <a href="#"><h6 class="text-uppercase font-weight-bold">DMCA</h6></a>
+        <a href="#"><h6 class="text-uppercase font-weight-bold">Contact</h6></a>
+      </div>
+      <div class="footer-disclamer text-md-left mt-5">
+        <div class="footer-disclamer-text font-italic">
+            "ANIHUB does not store any files on our server, we only linked to the media which is hosted on 3rd party services."
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+</div>
+
+
+<!-- FOOTER ABOVE -->
+
+<!-- TESTING IDEAS BELOW -->
+</body>
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
