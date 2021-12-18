@@ -165,6 +165,7 @@ body,
     cursor: pointer;
     color: royalblue;
     text-decoration: underline;
+    whitespace: nowrap;
 }
 
 .info-side-2 > div {
