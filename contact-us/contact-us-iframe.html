@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://cdn.jsdelivr.net/gh/mkpro118/mkpro118-repository/HTML-CSS-JS%20Programs/MKQuery/MKQuery.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <style>
+        *,
+        *::after,
+        *::before {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        :root,
+        html {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        body,
+        .wrapper {
+            width: 100%;
+            height: 100%;
+            background: #202124;
+            font-size: 16px;
+            font-family: "Montserrat", sans-serif;
+            color: #fff;
+        }
+
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .banner {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 300px;
+            user-select: none;
+            padding: 0 10px;
+            position: relative;
+            text-align: center;
+        }
+
+        .banner::before {
+            position: absolute;
+            content: '';
+            inset: 0;
+            background: url('https://images.unsplash.com/photo-1436891620584-47fd0e565afb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80');
+            background-size: cover;
+            background-position: 50% 55%;
+            z-index: 1;
+        }
+
+        .welcome-text {
+            margin-bottom: 20px;
+            z-index: 2;
+        }
+
+        .banner-text {
+            z-index: 2;
+        }
+
+        .about-us {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 0.269fr 1fr;
+            gap: 25px;
+            min-height: 400px;
+            text-align: center;
+            padding: 0 25px;
+            max-width: 100vw;
+            overflow-x: hidden;
+        }
+
+        .about-us .title {
+            grid-column: 1 / 4;
+            grid-row: 1 / 2;
+            display: grid;
+            place-items: center;
+        }
+
+        .card.left {
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+        }
+
+        .card.middle {
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+        }
+
+        .card.right {
+            grid-column: 3 / 4;
+            grid-row: 2 / 3;
+        }
+
+        .card {
+            border: 2px solid white;
+            border-radius: 20px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            min-height: 269px;
+        }
+
+        .member-image > img {
+            border-radius: 50%;
+            width: 30%;
+        }
+
+        .member-name {
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-decoration: underline;
+            text-decoration-skip-ink: auto;
+        }
+
+        @media screen and (max-width: 1000px) {
+            .about-us {
+                margin-top: 20px;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-template-rows: 0.269fr 1fr 1fr;
+            }
+
+            .about-us .title {
+                grid-column: 1 / 5;
+            }
+
+            .card.left {
+                grid-column: 1 / 3;
+            }
+
+            .card.middle {
+                grid-column: 3 / 5;
+            }
+
+            .card.right {
+                grid-row: 3 / 4;
+                grid-column: 2 / 4;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .banner {
+                min-height: 242px;
+            }
+
+            .welcome-text {
+                font-size: 1.42rem;
+            }
+
+            .about-us {
+                grid-template-columns: 1fr;
+                grid-template-rows: 0.69fr 1fr 1fr 1fr;
+            }
+
+            .about-us .title {
+                grid-column: 1 / 2;
+            }
+
+            .title > h2 {
+                font-size: 1.269rem;
+            }
+
+            .card.left {
+                grid-column: 1 / 2;
+            }
+
+            .card.middle {
+                grid-column: 1 / 2;
+                grid-row: 3 / 4;
+            }
+
+            .card.right {
+                grid-row: 4 / 5;
+                grid-column: 1 / 2;
+            }
+
+            .member-image > img {
+                width: 20%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="wrapper">
+        <div class="banner">
+            <h1 class="welcome-text">Thank you for visiting AniHub!</h1>
+            <p class="banner-text">If you have any questions or suggestions you can ask any of the team members below.</p>
+        </div>
+        <div class="about-us">
+            <div class="title"><h2>About Us</h2></div>
+            <div class="card left">
+                <p class="member-image">
+                    <img src="https://i.imgur.com/xx1yX7X.png" alt="Image of Bharath">
+                </p>
+                <p class="member-name">D. Bharath</p>
+                <p class="member-about">A student studying Cyber Security at VIT Bhopal University.
+                Implemented the interface for Anime Details.
+                </p>
+                <p class="member-discord"><i class="fa fa-discord-alt"></i>&nbsp;<em><strong>flamekiller</strong>#2822</em></p>
+            </div>
+            <div class="card middle">
+                <p class="member-image">
+                    <img src="https://i.imgur.com/xx1yX7X.png" alt="Image of ">
+                </p>
+                <p class="member-name">Jany Doe</p>
+                <p class="member-about">A student studying Cyber Security at VIT Bhopal University.
+                Implemented the interface for Anime Details.</p>
+                <p class="member-discord"><i class="fa fa-discord-alt"></i>&nbsp;<em><strong>ZODIAC</strong>#9495</em></p>
+            </div>
+            <div class="card right">
+                <p class="member-image">
+                    <img src="https://i.imgur.com/xx1yX7X.png" alt="Image of ">
+                </p>
+                <p class="member-name">John Doe</p>
+                <p class="member-about">A student studying Cyber Security at VIT Bhopal University.
+                Implemented the interface for Anime Details.</p>
+                <p class="member-discord"><i class="fa fa-discord-alt"></i>&nbsp;<em><strong>Sam298</strong>#3423</em></p>
+            </div>
+        </div>
+    </main>
+    <script>
+        function resize() {
+            $('.wrapper').css('height', `${$('.banner').scrollHeight + $('.about-us').scrollHeight + 35}px`)
+        }
+        $((event) => {
+            resize()
+            event.source.postMessage(JSON.stringify({
+                height: document.body.scrollHeight,
+            }), "*")
+        }, {on: 'message'})
+    </script>
+</body>
+</html>
