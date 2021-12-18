@@ -1,5 +1,5 @@
 export default async function Anime(slug) {
-    const data = await fetch('data.json').then(res => res.json())
+    const data = await fetch('/anime/data.json').then(res => res.json())
     let found = false
     let anime_name, anime_rating, anime_lang, anime_type, anime_episodes, anime_duration, anime_image, anime_cover, anime_desc, japanese, synonym, aired, premier, _status, genres, studio, producers, seasons;
     for (const anime of data) {
