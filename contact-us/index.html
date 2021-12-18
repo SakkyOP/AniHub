@@ -69,10 +69,16 @@
 
 
   <script>
-    window.addEventListener('resize', () => {
+    function __resize() {
       if (window.innerWidth <= 992) {
          document.querySelector('.footer-quick-fix').style.height = '5px';
       }
+    }
+    
+    document.addEventListener('DOMContentLoaded', __resize)
+    
+    window.addEventListener('resize', () => {
+      __resize()
       document.querySelector('iframe').contentWindow.postMessage(JSON.stringify({msg: "Send your height!"}), "*")
     })
 
