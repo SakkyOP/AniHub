@@ -1,0 +1,429 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    font-family: 'Montserrat', sans-serif;   /* Font for whole website. */
+}
+
+body{
+    background: #0E0E0E;
+    height: 100vh;
+}
+
+
+/* -- NAVBAR CSS --*/
+
+.navbar {
+    background: #7F00FF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #5C16C5, #7F00FF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #5C16C5, #7F00FF);
+    box-shadow: 3px 3px 4px 4px rgba(170, 170, 170, 0.2);
+    border-bottom: 3px solid rgba(240, 255, 255, 0.3);
+    /* border-bottom-left-radius: 37px ; */
+}
+
+.navbar-light .navbar-brand{
+    font-weight: 700;
+    color: azure;
+    border: 5px solid azure;
+    padding: 0px 10px;
+    border-radius: 20px;
+}
+.navbar-light .navbar-brand:hover{
+    color: azure;
+}
+
+.dropdown-menu{
+    background: #7F00FF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #5C16C5, #7F00FF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #5C16C5, #7F00FF);
+    box-shadow: 3px 3px 4px 4px rgba(170, 170, 170, 0.2);
+}
+
+.navbar-light .navbar-nav .nav-link{
+    color: azure;
+    font-weight: 500;
+}
+.navbar-light .navbar-nav .active >.nav-link{
+    color: azure;
+}
+.navbar-light .navbar-nav .nav-link:hover{
+    color: azure;
+    font-weight: 600;
+}
+
+.dropdown-item{
+    color: azure;
+
+}
+
+.dropdown-item:hover{
+    background-color: transparent;
+    color: azure;
+    font-weight: 600;
+}
+
+.form-control{
+    background: #00000000;
+    border: 2px solid azure;
+}
+.form-control::placeholder{
+    color: azure;
+    font-weight: 500;
+}
+
+
+.form-control.mr-sm-2{
+    background: #00000000;
+    border: 2px solid azure;
+    color: azure;
+    font-weight: 500;
+    outline: none;
+}
+
+.btn{
+    color: white;
+    font-weight: 600;
+    border: 2px solid azure;
+}
+.btn-outline-success:hover{
+    background: white;
+    color: #0E0E0E;
+    border-color: azure;
+    transition: all 0.2s ease-in-out;
+}
+
+.navbar-light .navbar-toggler {
+    border-color: azure;
+    border: 2px solid azure;
+    color: azure;
+    background-color: #00000000;
+    border-radius: 10px;
+}
+
+.custom-toggler .navbar-toggler-icon {
+    background-image: url('https://img.icons8.com/ios/100/ffffff/menu--v1.png');
+}
+
+.custom-toggler.navbar-toggler {
+    border-color: rgb(255, 252, 252);
+}
+
+.navbar-nav .dropdown-menu{
+    margin-top: 8px;
+    border: 2px solid rgba(240, 255, 255, 0.3);
+
+}
+
+
+/* -- FOOTER CSS --*/
+.page-footer{
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.bg-dark {
+    background-color: #202124 !important;
+}
+.row h6 {
+    color: azure;
+}
+
+.row hr {
+    background-color: #7F00FF !important;
+    /*
+    background-color: #7F00FF !important;  /* fallback for old browsers 
+    background-color: -webkit-linear-gradient(to right, #5C16C5, #7F00FF ) !important;  /* Chrome 10-25, Safari 5.1-6
+    background-color: linear-gradient(to right, #5C16C5, #7F00FF )!important; */
+
+    margin-left: -1px !important;
+}
+
+.footer-social-text{
+    color: azure !important;
+}
+
+.col-md-12{
+    display: flex;
+}
+
+.footer-social-text-t1{
+    font-size: 12px;
+    margin-bottom: 0.2rem;
+}
+
+.footer-social-text-t2{
+    font-size: 16px;
+    font-weight: 600;
+}
+.footer-social-links{
+    margin-left: 1rem;
+    padding-top: 8px;
+}
+
+.footer-social-links a{
+    text-decoration: none;
+}
+.footer-social-links a i{
+    border: 2px solid azure;
+    border-radius: 6px;
+    padding: 14px;
+    padding-left:  14px;
+    padding-right: 14px;
+    margin-top: 0.5rem;
+}
+
+.fab.fa-facebook-f{
+    padding-left:  16px;
+    padding-right: 16px;
+}
+
+.fab.fa-discord{
+    padding-left:  12px;
+    padding-right: 12px;
+}
+
+.fab.fa-instagram{
+    padding-left:  14px;
+    padding-right: 14px;
+}
+
+
+
+.footer-social-text{
+ border-left: 2px solid azure;
+ border-width: 2px;
+ padding-left: 1.5rem;
+ padding-top: 8px;
+}
+
+.col-md-12 > .navbar-brand {
+    margin-top: 14px;
+    color: azure;
+    font-weight: 600;
+    border: 4px solid #7F00FF;
+    border-radius: 20px;
+    padding: 0 16px;
+    height: 40px;
+}
+.col-md-12 > .navbar-brand:hover {
+    color: #7F00FF;
+    border: 4px solid azure;
+    transition: all 0.3s ease-in-out;
+}
+
+.footer-social-links a i:hover{
+    border: 2px solid #7F00FF;
+    color: #7F00FF!important;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Anime character IMAGE [INSIDE FOOTER] */
+
+.anime-character {
+    overflow: none;
+    z-index: 2;
+    text-align: right;
+    text-align: top;
+    margin-top: -240px;
+    margin-left: 340px;
+}
+.footer-anime-img{
+    position: absolute;
+    width: 460px;
+    text-align: right;
+}
+
+.page-footer.bg-dark > .container{
+    z-index: -1;
+}
+
+.footer-section-2{
+    display: flex;
+    justify-content-body: flex-start;
+    width: 100%;
+    
+}
+
+.footer-section-2 a{
+    border-bottom: 4px solid #7F00FF;
+    border-bottom-right-radius: 8px;
+    margin-right: 4rem;
+    text-decoration: none;
+    margin-bottom: 10px;
+    padding-right: 0.8rem;
+    margin-left: 20px;
+    
+}
+
+.footer-section-2 a:hover{
+    border-bottom: 4px solid azure;
+    transition: 0.3s ease;
+}
+
+.footer-section-2 h6:hover{
+    color: #7F00FF;
+    transition: 0.3s ease;
+}
+
+.footer-section-2 h6{
+    font-size: 10px;
+}
+
+.footer-section-2 h6{
+    margin-bottom: 0.2rem;
+}
+
+.footer-disclamer{
+    margin-left: 20px;
+}
+
+.footer-disclamer-text{
+    font-weight: 600;
+    font-size: 12px;
+    background: linear-gradient(to right, #9e9d9d 0%, azure 1%, #9e9d9d 10%);
+    background-position: 0;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: footer-disclamer-text 3s infinite linear;
+    animation-fill-mode: forwards;
+    -webkit-text-size-adjust: none;
+    text-decoration: none;
+    margin-top: -2.5rem;
+    margin-bottom: 2rem;
+    text-align: left;
+    
+}
+
+.footer-quick-fix{
+    width: 200px;
+    height: 200px;
+}
+
+
+/* BODY CSS */
+.main-body{
+    width: 100vh;
+    display: flex;
+    min-height: 100vh;
+}
+.character-left-side-img{
+    opacity: 0.2;
+    position: absolute;
+    width: 480px;
+}
+
+.main-body > .content-body  p{
+    font-weight: bold;
+    color: azure;
+}
+.content-body{
+    /* margin-left: 26%; */
+    background-color: #202124;
+    width: 100vw;
+    /* width: 72%; */
+    /* position: relative; */
+}
+.main-body{
+    position: relative;
+    width: 100%;
+    /* margin: 2rem 0; */
+    
+}
+/* ANIMATION FOR Shining Class. */
+@-moz-keyframes footer-disclamer-text {
+    0% {
+      background-position: 0;
+    }
+    60% {
+      background-position: 700px;
+    }
+    100% {
+      background-position: 700px;
+    }
+  }
+  @-webkit-keyframes footer-disclamer-text {
+    0% {
+      background-position: 0;
+    }
+    60% {
+      background-position: 700px;
+    }
+    100% {
+      background-position: 700px;
+    }
+  }
+  @-o-keyframes footer-disclamer-text {
+    0% {
+      background-position: 0;
+    }
+    60% {
+      background-position: 700px;
+    }
+    100% {
+      background-position: 700px;
+    }
+  }
+  @keyframes footer-disclamer-text {
+    0% {
+      background-position: 0;
+    }
+    60% {
+      background-position: 700px;
+    }
+    100% {
+      background-position: 700px;
+    }
+  }
+
+/*
+Write media query for 932p charactor is not compatable with mobile version
+*/
+@media only screen and (max-width: 1200px){
+    .anime-character {
+        overflow: none;
+        z-index: 2;
+        text-align: right;
+        text-align: top;
+        margin-top: -260px;
+        margin-left: 50px;
+    }
+    .footer-anime-img{
+        width: 350px;
+    }
+}
+
+
+
+@media only screen and (max-width: 992px){
+    .anime-character{
+        display: none;
+    }
+    .footer-disclamer{
+        width: 100%;
+    }
+    .footer-disclamer-text{
+        margin-top: -2.5rem;
+        margin-bottom: 2rem;
+    }
+}
+
+
+@media only screen and (max-width: 780px){
+    .col-md-12 > .navbar-brand{
+        margin-top: 2.8rem;
+    }
+
+    .footer-social-links{
+        padding-right: 50px;
+    }
+    .footer-social-text{
+        margin-top: 1rem;
+    }
+
+}
