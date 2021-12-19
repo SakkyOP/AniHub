@@ -40,7 +40,7 @@
             text-align: center;
         }
 
-        fieldset.request-form {
+        .request-form {
             display: flex;
             flex-direction: column;
             min-height: 300px;
@@ -126,7 +126,7 @@
             Thank You! Your suggestion has been noted!
         </span>
         <h2>Feel like we're missing something? Tell us!</h2>
-        <fieldset class="request-form">
+        <section class="request-form">
             <label class="requester-name">
                 <input type="text" placeholder="Username">
             </label>
@@ -136,7 +136,7 @@
             <button class="request-btn">
                 Submit Request
             </button>
-        </fieldset>
+        </section>
     </main>
     <script type="text/javascript">
         $('button.request-btn').on('click', () => {
