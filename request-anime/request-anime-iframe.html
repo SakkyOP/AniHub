@@ -146,7 +146,15 @@
             }, 3669)
             $('.requested-anime-name > input').get().value = ''
         })
-
+        function resize() {
+            $('.wrapper').css('height', `${$('.banner').scrollHeight + $('.about-us').scrollHeight + 35}px`)
+        }
+        $((event) => {
+            resize()
+            event.source.postMessage(JSON.stringify({
+                height: document.body.scrollHeight,
+            }), "*")
+        }, {on: 'message'})
     </script>
 </body>
 </html>
