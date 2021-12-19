@@ -69,17 +69,17 @@ export default async function Anime(slug) {
     $('.anime-img').css('background-image', `url('${anime_cover}')`)
 
     if (anime_desc.length <= 265) {
-        $('.desc').text(anime_desc)
+        $('.desc').html(anime_desc)
     } else {
-        $('.desc').text(anime_desc.substring(0, 265) + '...')
+        $('.desc').html(anime_desc.substring(0, 265) + '...')
         $('.toggle').get().innerText = '+ More'
     }
     $('.toggle').on('click', () => {
         if ($('.toggle').text() === '- Less') {
-            $('.desc').text(anime_desc.substring(0, 265) + '...')
+            $('.desc').html(anime_desc.substring(0, 265) + '...')
             $('.toggle').text('+ More')
         } else {
-            $('.desc').text(anime_desc)
+            $('.desc').html(anime_desc)
             $('.toggle').text('- Less')
         }
     })
