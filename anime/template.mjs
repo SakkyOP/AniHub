@@ -96,6 +96,10 @@ export default async function Anime(slug) {
 
     if (seasons.length) {
         $('.more-seasons').css('padding-left', '3rem').append($('<h2>', {innerText: "More Seasons", style: "margin: 2rem 0"}))
-        $('.more-seasons').append(...seasons.map(season => $('<span>', {innerText: season})))
+        $('.more-seasons').append(...seasons.map(season => $('<span>', {innerText: season[0]}).on('click', () => { 
+            try {
+                window.open(`/anime/${season[1]}`)
+            } catch (err) {}
+        })))
     }
 }
