@@ -144,7 +144,7 @@
             setTimeout(() => {
                 $('span.success').removeClass('display-active')
             }, 3669)
-            $('.requested-anime-name > input').get().value = ''
+            document.querySelectorAll('.requested-anime-name > input').forEach(e => e.value = '')
         })
         function resize() {
             $('.wrapper').css('height', `${$('.banner').scrollHeight + $('.about-us').scrollHeight + 35}px`)
