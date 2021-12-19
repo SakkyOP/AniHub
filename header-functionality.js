@@ -1,5 +1,5 @@
 const nav_links = document.querySelectorAll('a.nav-link')
-const nav_links_href = ['/', '', '/most-popular',]
+const nav_links_href = ['/', '/most-popular',]
 
 for (let i = 0; i < nav_links_href.length; i++) {
     nav_links[i].setAttribute('href', nav_links_href[i])
