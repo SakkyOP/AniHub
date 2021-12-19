@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AniHub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/anime/style.css">
+    <script src="https://cdn.jsdelivr.net/gh/mkpro118/mkpro118-repository/HTML-CSS-JS%20Programs/MKQuery/MKQuery.js"></script>
+    <script type="module" src="/anime/script.js"></script>
+</head>
+<body>
+    <main class="wrapper">
+        <div class="anime-info" data-slug="np-game-no-life">
+            <section class="info-side-1">
+               <span class="anime-img">
+               </span> 
+               <div class="anime-info-content">
+                    <nav>
+                        <ul>
+                            <li class="home-nav"><a href="#">Home</a></li>
+                            <li class="anime-nav"></li>
+                        </ul>
+                    </nav>
+                    <h1 class="anime-name"></h1>
+                    <div class="anime-stats">
+                        <ul>
+                            <li class="anime-rating"></li>
+                            <li class="anime-type"></li>
+                            <li class="anime-episodes"></li>
+                            <li class="anime-duration"></li>
+                        </ul>
+                    </div>
+                    <div class="anime-buttons">
+                        <div class="watch-anime-container">
+                            <div class="watch-anime">
+                                <svg height="1.5rem" width="20%" viewBox="0 0 32 32">
+                                    <polygon points="24,16 8,8 8,24" style="fill: black">
+                                    </polygon>
+                                </svg>
+                                <span>Watch now</span>
+                            </div>
+                        </div>
+                        <div class="add-to-list-container">
+                            <div class="add-to-list">
+                                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMjQgMTBoLTEwdi0xMGgtNHYxMGgtMTB2NGgxMHYxMGg0di0xMGgxMHoiLz48L3N2Zz4=">
+                                <span>Add to list</span>
+                            </div>
+                        </div>
+                    </div>
+                    <section class="anime-desc">
+                        <p class="desc"></p>
+                        <span class="toggle"></span>
+                    </section>
+               </div>
+            </section>
+            <section class="info-side-2">
+                <div>
+                    <div class="japanese">
+                        <span>Japanese</span>
+                        <p></p>
+                    </div>
+                    <div class="synonym">
+                        <span>Synonyms</span>
+                        <p></p>
+                    </div>
+                    <div class="aired">
+                        <span>Aired</span>
+                        <p></p>
+                    </div>
+                    <div class="premier">
+                        <span>Premier</span>
+                        <p></p>
+                    </div>
+                    <div class="duration">
+                        <span>Duration</span>
+                        <p></p>
+                    </div>
+                    <div class="status">
+                        <span>Status</span>
+                        <p></p>
+                    </div>
+                    <div class="genre">
+                        <span>Genre</span>
+                        <p></p>
+                    </div>
+                    <div class="studio">
+                        <span>Studio</span>
+                        <p></p>
+                    </div>
+                    <div class="producers">
+                        <span>Producers</span>
+                        <p></p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="more-seasons">
+        </div>
+    </main>
+    <script>
+        $((event) => {
+            console.log(JSON.parse(event.data).msg)
+            event.source.postMessage(JSON.stringify({
+                height: document.body.scrollHeight,
+            }), "*")
+        }, {on: 'message'})
+    </script>
+</body>
+</html>
