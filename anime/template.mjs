@@ -15,12 +15,12 @@ export default async function Anime(slug) {
             anime_cover = anime.anime_cover
             anime_desc = anime.overview
             japanese = anime.japanese
-            synonym = anime.synonym
+            synonym = anime.synonyms
             aired = anime.aired
-            premier = anime.premier
+            premier = anime.premiered
             _status = anime.status
             genres = anime.genres
-            studio = anime.studio
+            studio = anime.studios
             producers = anime.producers
             seasons = anime.seasons
             found = true
