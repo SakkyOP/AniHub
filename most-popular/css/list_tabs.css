@@ -1,0 +1,42 @@
+/*
+This is for the side lists thingy watch this video for css code
+
+https://www.youtube.com/watch?v=DI-eK-3j52g
+
+*/
+
+.tabs ul{
+    margin: 1.2em -1em 0 0;
+    list-style: none;
+    width: 100%;
+    height: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.tabs ul li{
+    margin: 0 0.5em;
+    height: 1.6em;
+    width: 22%;
+    font-weight: 600;
+    text-align: center;
+    text-transform: capitalize;
+    color: antiquewhite;
+    background-color:#242121;
+    cursor: pointer;
+    font-size: 14px;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    padding: 0.1em 0.1em;
+    border-radius: 4px;
+}
+
+.tabs ul li p{
+    margin-top: 0.2em;
+    background-color: #00000000;
+}
+
+.tabs ul li.active{
+    background-color:#7F00FF;
+}
+
