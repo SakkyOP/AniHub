@@ -60,8 +60,8 @@
         "studio": "MadHouse",
         "producers": "TV Tokyo, Bandai Visual, Lantis, Asatsu DK, Banpresto, Good Smile Company, Shueisha, JR East Marketing & Communications, Madhouse, Viz Media",
         "seasons": [
-            "Season 1",
-            "Season 2"
+            ["Season 1"],
+            ["Season 2", "one-punch-man-s2"]
         ]
     },
     {
@@ -94,8 +94,8 @@
         "studio": "J.C.Staff",
         "producers": "TV Tokyo, Good Smile Company, Shueisha, JR East Marketing & Communications, Bandai Namco Arts, Bandai Spirits, J.C.Staff, Viz Media",
         "seasons": [
-            "Season 1",
-            "Season 2"
+            ["Season 1", "one-punch-man"],
+            ["Season 2"]
         ]
     },
     {
