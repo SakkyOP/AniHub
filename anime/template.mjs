@@ -3,22 +3,22 @@ export default async function Anime(slug) {
     let found = false
     let anime_name, anime_rating, anime_lang, anime_type, anime_episodes, anime_duration, anime_image, anime_cover, anime_desc, japanese, synonym, aired, premier, _status, genres, studio, producers, seasons;
     for (const anime of data) {
-        if (anime.slug === slug) {
+        if (anime.anime_slug === slug) {
             console.log('Anime Found')
             anime_name = anime.anime_name 
             anime_rating = anime.anime_rating
             anime_lang = anime.anime_lang
             anime_type = anime.anime_type
             anime_episodes = anime.anime_episodes
-            anime_duration = anime.anime_duration
+            anime_duration = anime.duration
             anime_image = anime.anime_image
             anime_cover = anime.anime_cover
-            anime_desc = anime.anime_desc
+            anime_desc = anime.overview
             japanese = anime.japanese
             synonym = anime.synonym
             aired = anime.aired
             premier = anime.premier
-            _status = anime._status
+            _status = anime.status
             genres = anime.genres
             studio = anime.studio
             producers = anime.producers
