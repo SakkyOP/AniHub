@@ -253,6 +253,20 @@
   <!-- BODY HERE ABOVE -->
 
    <iframe src="/most-popular/most-popular-iframe.html" frameborder="0" width="100%" height="100%"></iframe>
+  
+  <script>
+    window.addEventListener('resize', () => {
+      document.querySelector('iframe').contentWindow.postMessage(JSON.stringify({msg: "Send your height!"}), "*")
+    })
+
+    document.querySelector('iframe').addEventListener('load', () => {
+      document.querySelector('iframe').contentWindow.postMessage(JSON.stringify({msg: "Send your height!"}), "*")
+    })
+
+    window.addEventListener('message', (e) => {
+        document.querySelector('iframe').style.height = `${JSON.parse(e.data).height}px`
+    })
+  </script>
 
 
   <!-- FOOTER BELOW -->
