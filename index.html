@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,19 +8,20 @@
   <title>ANIHUB</title>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
     integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/main-min.css">
-  <link rel="icon" href="https://i.imgur.com/lDCx3RX.png" type="image/png" />
-  <link rel="shortcut icon" href="https://i.imgur.com/lDCx3RX.png" type="image/png" />
-  <script type="text/javascript" src="/header-functionality.js" defer></script>
+  <link rel="stylesheet" href="css/main-slider.css">
+  <link rel="stylesheet" href="css/trending.css">
 </head>
 
 <body>
-<!-- NAV BAR BELOW -->
+  <!-- NAV BAR BELOW -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">ANIHUB</a>
-    <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse"
+      data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+      aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -28,8 +30,17 @@
         <li class="nav-item active">
           <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
         </li>
+        <!-- <li class="nav-item active">
+          <a class="nav-link" href="#">Movie <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Tv Series <span class="sr-only">(current)</span></a>
+        </li> -->
         <li class="nav-item active">
           <a class="nav-link" href="#">Most Popular</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Contact US <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item dropdown active">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
@@ -38,7 +49,7 @@
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="#" id="action">Request Anime</a>
-            <a class="dropdown-item" href="#">Contact Us</a>
+            <a class="dropdown-item" href="#">Request Movie</a>
           </div>
         </li>
         <!-- <li class="nav-item">
@@ -51,100 +62,265 @@
       </form>
     </div>
   </nav>
-<!-- NAV BAR ABVE -->
+  <!-- NAV BAR ABVE -->
 
 
+  <!-- BODY HERE BELOW -->
+  <div class="main-body">
 
-<!-- BODY HERE BELOW -->
-<div class="main-body">
-  
-  <div class="char-image">
-    <img class="character-left-side-img" src="images/luffy2.png" alt="" srcset="">
-  </div>
-  <div class="content-body">
-  <!-- MAIN CONTENT HERE!! -->
-    <p>Hello World</p>
+    <div class="char-image">
+      <img class="character-left-side-img" src="images/luffy2.png" alt="" srcset="">
+      <img class="character-right-side-img" src="images/saitama_cartoon.png" alt="" srcset="">
+    </div>
+    <div class="content-body container">
 
+      <div class="slide-main page-footer">
 
-  <script>
-    window.addEventListener('resize', () => {
-      document.querySelector('iframe').contentWindow.postMessage(JSON.stringify({msg: "Send your height!"}), "*")
-    })
-
-    document.querySelector('iframe').addEventListener('load', () => {
-      document.querySelector('iframe').contentWindow.postMessage(JSON.stringify({msg: "Send your height!"}), "*")
-    })
-
-    window.addEventListener('message', (e) => {
-        document.querySelector('iframe').style.height = `${JSON.parse(e.data).height}px`
-    })
-  </script>
-  </div>
-
-</div>
-<!-- BODY HERE ABOVE -->
-
-
-
-
-<!-- FOOTER BELOW -->
-
-<div class="footer-quick-fix">  <!-- This is so the footer luffy wont clash with other body contents  -->
-
-</div>
-<div class="page-footer bg-dark">
-  <div class="container">
-    <div class="row py-4 d-flex align-items-center">
-      <div class="col-md-12">
-        <a class="navbar-brand" href="#">ANIHUB</a>
-        <div class="footer-social-text">
-            <p class="footer-social-text-t1">Join Now</p>
-            <p class="footer-social-text-t2">ANIHUB GROUP</p> 
+        <div class="slide">
+          <img id="img1" src="images/slider/1.png" alt="">
+          <div class="caption">
+            <p class="caption-title-1">
+              #1 Spotlight
+            </p>
+            <p class="caption-title-2">
+              One Piece
+            </p>
+            <p class="caption-dis">
+              The series focuses on Monkey D. Luffy, a rubberized young man who, inspired by his childhood idol, the
+              powerful pirate "Red Haired" Shanks, sets off on a journey from the East Blue Sea to find the mythical One
+              Piece and proclaim himself the King of the Pirates.
+            </p>
+            <a href="#">
+              <button class="sidebar-btn1" type="button"><i class="far fa-play-circle"></i>Watch Now</button>
+            </a>
+            <a href="#">
+              <button class="sidebar-btn2" type="button">Details<i class="fas fa-greater-than"></i></button>
+            </a>
+          </div>
         </div>
-        <div class="footer-social-links">
-          <a href="#">
-            <i class="fab fa-facebook-f text-white mr-4"></i>
-          </a>
-          <a href="#">
-            <i class="fab fa-twitter text-white mr-4"></i>
-          </a>
-          <a href="#">
-            <i class="fab fa-instagram text-white mr-4"></i>
-          </a>
-          <a href="#">
-            <i class="fab fa-discord text-white mr-4"></i>
-          </a>
-          <div class="anime-character">
-            <img class="footer-anime-img" src="images/luffy1.png" alt="" srcset="">
+
+        <div class="slide">
+          <img id="img2" src="images/slider/2.png" alt="">
+          <div class="caption">
+            <p class="caption-title-1">
+              #2 Spotlight
+            </p>
+            <p class="caption-title-2">
+              Your Lie In April
+            </p>
+            <p class="caption-dis">
+              A piano prodigy who lost his ability to play after suffering a traumatic event in his childhood is forced
+              back into the spotlight by an eccentric girl with a secret of her own. The story follows Arima Kousei, a
+              skilled pianist. However, he hasn't played since he played for his mother who died a few years ago.
+            </p>
+            <a href="#">
+              <button class="sidebar-btn1" type="button"><i class="far fa-play-circle"></i>Watch Now</button>
+            </a>
+            <a href="#">
+              <button class="sidebar-btn2" type="button">Details<i class="fas fa-greater-than"></i></button>
+            </a>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img id="img3" src="images/slider/3.png" alt="">
+          <div class="caption">
+            <p class="caption-title-1">
+              #3 Spotlight
+            </p>
+            <p class="caption-title-2">
+              Naruto
+            </p>
+            <p class="caption-dis">
+              It tells the story of Naruto Uzumaki, a young ninja who seeks recognition from his peers and dreams of
+              becoming the Hokage, the leader of his village. The story is told in two parts – the first set in Naruto's
+              pre-teen years, and the second in his teens.
+            </p>
+            <a href="#">
+              <button class="sidebar-btn1" type="button"><i class="far fa-play-circle"></i>Watch Now</button>
+            </a>
+            <a href="#">
+              <button class="sidebar-btn2" type="button">Details<i class="fas fa-greater-than"></i></button>
+            </a>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img id="img4" src="images/slider/4.png" alt="">
+          <div class="caption">
+            <p class="caption-title-1">
+              #4 Spotlight
+            </p>
+            <p class="caption-title-2">
+              Dragon Ball Z
+            </p>
+            <p class="caption-dis">
+              Dragon Ball Z continues the adventures of Son Goku in his adult life as he and his companions defend the
+              Earth against villains including aliens (Vegeta, Frieza), androids (Cell), and magical creatures (Majin
+              Buu).
+            </p>
+            <a href="#">
+              <button class="sidebar-btn1" type="button"><i class="far fa-play-circle"></i>Watch Now</button>
+            </a>
+            <a href="#">
+              <button class="sidebar-btn2" type="button">Details<i class="fas fa-greater-than"></i></button>
+            </a>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img id="img3" src="images/slider/5.png" alt="">
+          <div class="caption">
+            <p class="caption-title-1">
+              #5 Spotlight
+            </p>
+            <p class="caption-title-2">
+              Hunter x Hunter
+            </p>
+            <p class="caption-dis">
+              Gon Freecss aspires to become a Hunter, an exceptional being capable of greatness. With his friends and
+              his potential, he seeks for his father who left him when he was younger. Gon Freecss is a young boy living
+              on Whale Island. ... Gon is a young boy whose father disappeared long ago, being a Hunter.
+            </p>
+            <a href="#">
+              <button class="sidebar-btn1" type="button"><i class="far fa-play-circle"></i>Watch Now</button>
+            </a>
+            <a href="#">
+              <button class="sidebar-btn2" type="button">Details<i class="fas fa-greater-than"></i></button>
+            </a>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img id="img3" src="images/slider/6.png" alt="">
+          <div class="caption special-case-of-caption">
+            <p class="caption-title-1">
+              #6 Spotlight
+            </p>
+            <p class="caption-title-2">
+              Tokyo Ghoul
+            </p>
+            <p class="caption-dis">
+              The story follows Ken Kaneki, a college student who barely survives a deadly encounter with Rize
+              Kamishiro, his date who reveals herself as a ghoul. He is taken to the hospital in critical condition.
+              After recovering, Kaneki discovers that he underwent a surgery that transformed him into a half-ghoul.
+            </p>
+            <a href="#">
+              <button class="sidebar-btn1" type="button"><i class="far fa-play-circle"></i>Watch Now</button>
+            </a>
+            <a href="#">
+              <button class="sidebar-btn2" type="button">Details<i class="fas fa-greater-than"></i></button>
+            </a>
+          </div>
+        </div>
+
+        <span class="arrow prev" onclick="controller(-1)">&#10094;</span>
+        <span class="arrow next" onclick="controller(1)">&#10095;</span>
+
+      </div>
+
+      <div class="carousel" data-flickity='{"wrapAround": true , "autoPlay": true ,  "groupCells": true }'>
+                  <div class="carousel-cell">
+                    <img src="images/slider/1.png" alt="">
+                  </div>
+                  <div class="carousel-cell">
+                    <img src="images/slider/2.png" alt="">
+                  </div>
+                  <div class="carousel-cell">
+                    <img src="images/slider/3.png" alt="">
+                  </div>
+                  <div class="carousel-cell">
+                    <img src="images/slider/4.png" alt="">
+                  </div>
+                  <div class="carousel-cell">
+                    <img src="images/slider/5.png" alt="">
+                  </div>
+                  <div class="carousel-cell">
+                    <img src="images/slider/6.png" alt="">
+                  </div>
+      </div>
+
+
+      
+    </div>
+
+
+              <!-- <img src="images/slider/1.png" alt=""> -->
+  </div>
+  <script src="js/slider.js"></script>
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+  <!-- BODY HERE ABOVE -->
+
+
+
+
+  <!-- FOOTER BELOW -->
+  <div class="footer-quick-fix">
+    <!-- This is so the footer luffy wont clash with other body contents  -->
+
+  </div>
+  <div class="page-footer bg-dark">
+    <div class="container">
+      <div class="row py-4 d-flex align-items-center">
+        <div class="col-md-12">
+          <a class="navbar-brand" href="#">ANIHUB</a>
+          <div class="footer-social-text">
+            <p class="footer-social-text-t1">Join Now</p>
+            <p class="footer-social-text-t2">ANIHUB GROUP</p>
+          </div>
+          <div class="footer-social-links">
+            <a href="#">
+              <i class="fab fa-facebook-f text-white mr-4"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-twitter text-white mr-4"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-instagram text-white mr-4"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-discord text-white mr-4"></i>
+            </a>
+            <div class="anime-character">
+              <img class="footer-anime-img" src="images/luffy1.png" alt="" srcset="">
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="container text-center text-md-left mt-5">
-    <div class="row">
-      <div class="footer-section-2">
-        <a href="#"><h6 class="text-uppercase font-weight-bold">Terms of Services</h6></a>
-        <a href="#"><h6 class="text-uppercase font-weight-bold">DMCA</h6></a>
-        <a href="#"><h6 class="text-uppercase font-weight-bold">Contact</h6></a>
-      </div>
-      <div class="footer-disclamer text-md-left mt-5">
-        <div class="footer-disclamer-text font-italic">
-            "ANIHUB does not store any files on our server, we only linked to the media which is hosted on 3rd party services."
+    <div class="container text-center text-md-left mt-5">
+      <div class="row">
+        <div class="footer-section-2">
+          <a href="#">
+            <h6 class="text-uppercase font-weight-bold">Terms of Services</h6>
+          </a>
+          <a href="#">
+            <h6 class="text-uppercase font-weight-bold">DMCA</h6>
+          </a>
+          <a href="#">
+            <h6 class="text-uppercase font-weight-bold">Contact</h6>
+          </a>
+        </div>
+        <div class="footer-disclamer text-md-left mt-5">
+          <div class="footer-disclamer-text font-italic">
+            "ANIHUB does not store any files on our server, we only linked to the media which is hosted on 3rd party
+            services."
+          </div>
         </div>
       </div>
     </div>
+
+
+
   </div>
-  
+  <!-- FOOTER ABOVE -->
 
+  <!-- TESTING IDEAS BELOW -->
+  <!-- CUSTOM SCROLL BAR -->
 
-</div>
-
-
-<!-- FOOTER ABOVE -->
-
-<!-- TESTING IDEAS BELOW -->
 </body>
+
 </html>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>

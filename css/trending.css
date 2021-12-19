@@ -1,0 +1,72 @@
+.carousel{
+    background: rgba(127, 0, 255, 0.2);
+    padding: 10px 0;
+    margin: 10px 0px;
+    border-radius: 6px;
+    height: 215px;
+
+}
+
+
+
+.carousel-cell {
+    width: 28%;
+    margin-right: 10px;
+    border-radius: 5px;
+    counter-increment: carousel-cell;
+    
+}
+
+.carousel-cell img{
+    width: 100%;
+}
+
+
+.trending{
+    background: rgba(127, 0, 255, 0.2);
+    padding: 10px 0;
+    margin: 10px 0px;
+    border-radius: 6px;
+}
+
+.flickity-page-dots{
+    margin-bottom: 1.56rem;
+    background: rgba(0, 0, 0, 0.4);
+}
+.flickity-page-dots .dot {
+    background: #7F00FF;
+}
+
+.flickity-button{
+    background: rgba(127, 0, 255, 0.6);
+    color: azure;
+    font: 16px;
+}
+
+.flickity-button:hover{
+    background: rgba(127, 0, 255, 0.6);
+    color: azure;
+}
+
+.flickity-viewport{
+    height: 50px;
+}
+
+@media only screen and (max-width: 1480px){
+    .flickity-button{
+        display: none;
+    }
+    .flickity-page-dots{
+        display: none;
+    }
+    .carousel{
+        background: none;
+        padding: 10px 0;
+        margin: 10px 0px;
+        border-radius: 6px;
+        height: 215px;
+    
+    }
+}
+
+

@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* [ This makes site responsive ] */
+    font-family: 'Montserrat', sans-serif;   /* Font for whole website. */
+    color: #6e09d3fd;
+}
+
+body{
+    background: #0E0E0E;
+}
+
+.heading{
+    color: #7F00FF;
+    font-size: 40px;
+    text-align: left;
+    margin-left: 4.8%;
+    text-transform: uppercase;
+    padding: 10px;
+}
+
+.heading:hover{
+    color: azure;
+    transition: 0.3s ease;
+}
+
+.container-v{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 15px;
+    align-items: flex-start;
+    padding: 5px 5%;
+}
+
+.container-v .main-video{
+    background: #202124;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.container-v .main-video video{
+    width: 100%;
+    border-radius: 8px;
+}
+
+.container-v .main-video .title{
+    font-size: 24px;
+    padding: 15px auto;
+    color: azure;
+    margin-left: 1rem;
+}
+
+.container-v .main-video .video h3{
+    margin-top: 1rem;
+}
+
+.container-v .video-list{
+    background: #202124;
+    border-radius: 8px;
+    height: 954px;
+    overflow-y: scroll;
+}
+
+.container-v .video-list::-webkit-scrollbar {
+    width: 12px;
+}
+
+.container-v .video-list::-webkit-scrollbar-track {
+    background: #0e0e0eb9; 
+}
+
+.container-v .video-list::-webkit-scrollbar-thumb {
+    background: #7515d6; 
+}
+
+.container-v .video-list ::-webkit-scrollbar-thumb:hover {
+    background: #7515d6ef; 
+}
+
+
+
+
+.container-v .video-list .vid{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: rgba(14, 14, 14, 0.6);
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+.container-v .video-list .vid:hover{
+    background: rgba(14, 14, 14, 0.6);
+}
+.container-v .video-list .vid.active{
+    background: rgba(116, 17, 209, 0.342);
+}
+.container-v .video-list .vid.active .title{
+    color: azure;
+}
+
+.container-v .video-list .vid.title{
+    font-size: 16px;
+}
+
+.container-v .video-list .vid video{
+    width: 100px;
+    border-right: 8px;
+}
+.controls{
+    margin: 1rem 0;
+    padding: 1rem 1rem;
+    margin-left: -0.5rem;
+    background: #0E0E0E;
+    border-radius: 10px;
+    cursor: pointer;
+    min-width: 560px;
+    
+}
+
+.controls span{
+    color: azure;
+    margin: 0.5rem;
+    font-size: 16px;
+    cursor: text;
+}
+
+.fas.fa-expand{
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+
+
+.far.fa-lightbulb{
+    color: azure;
+}
+
+
+
+@media (max-width:992px) {
+    .container-v{
+        grid-template-columns: 1.5fr 1fr;
+        padding: 10px;
+    }
+    .heading{
+        margin-left: 4px;
+    }
+}
+
+@media (max-width:768px) {
+    .container-v{
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .heading{
+        margin-left: 4px;
+    }
+}
+

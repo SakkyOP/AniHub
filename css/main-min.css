@@ -125,6 +125,7 @@ body{
     left: 0;
     bottom: 0;
     width: 100%;
+
 }
 
 .bg-dark {
@@ -314,8 +315,9 @@ body{
 }
 .character-left-side-img{
     opacity: 0.2;
-    position: absolute;
-    width: 480px;
+    position:fixed;
+    bottom:0px;
+    width: 420px;
 }
 
 .main-body > .content-body  p{
@@ -332,9 +334,26 @@ body{
 .main-body{
     position: relative;
     width: 100%;
+    color: azure;
     /* margin: 2rem 0; */
     
 }
+
+.container{
+    max-width: 1500px;
+}
+
+.character-right-side-img{
+    opacity: 0.4;
+    position:fixed;
+    bottom: 140px;
+    right: -120px;
+    width: 420px;
+}
+
+
+
+
 /* ANIMATION FOR Shining Class. */
 @-moz-keyframes footer-disclamer-text {
     0% {
@@ -380,6 +399,7 @@ body{
       background-position: 700px;
     }
   }
+
 
 /*
 Write media query for 932p charactor is not compatable with mobile version
@@ -427,3 +447,23 @@ Write media query for 932p charactor is not compatable with mobile version
     }
 
 }
+
+
+::-webkit-scrollbar {
+    width: 14px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #0e0e0eb9; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #7515d6; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #7515d6ef; 
+  }
