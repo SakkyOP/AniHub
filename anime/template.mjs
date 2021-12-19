@@ -1,3 +1,4 @@
+"use strict";
 export default async function Anime(slug) {
     const data = await fetch('/anime/data.json').then(res => res.json())
     let found = false
